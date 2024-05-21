@@ -1,0 +1,23 @@
+﻿@model CreateUserRequestModel
+
+<form asp-action="Create" asp-controller="User" method="post" class="p-3 w-75 m-auto">
+    <div class="mb-3">
+        <label>Kullanıcı ismi giriniz</label>
+        <span class="text-danger" asp-validation-for="UserName"></span>
+        <input asp-for="UserName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Kullanıcı Emailini giriniz</label>
+        <span class="text-danger" asp-validation-for="Email"></span>
+        <input asp-for="Email" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <button class="btn btn-primary">Kullanıcı ekle</button>
+    </div>
+
+    <div class="text-danger" asp-validation-summary="ModelOnly">
+
+    </div>
+</form>
